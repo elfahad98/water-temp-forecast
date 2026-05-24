@@ -1,0 +1,34 @@
+{
+  "selection_basis": {
+    "split": "val",
+    "cv": "fold-origin",
+    "mode": "expanding",
+    "primary_metric": "mae"
+  },
+  "h2": {
+    "winner": "ridge",
+    "alpha": 10.0,
+    "mae_val": 0.074358
+  },
+  "d1": {
+    "winner_overall": "baseline",
+    "mae_val_baseline": 0.41769,
+    "best_learned_model": "sarimax",
+    "mae_val_sarimax": 0.435637,
+    "order": [
+      2,
+      0,
+      1
+    ],
+    "seasonal_order": [
+      1,
+      0,
+      1,
+      12
+    ],
+    "exog_cols": [
+      "temp_air_eobs_c",
+      "rainf_eobs"
+    ]
+  }
+}

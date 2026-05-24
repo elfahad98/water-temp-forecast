@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+
+# jupyter
+.ipynb_checkpoints/
+
+# data mlflow
+data/*
+!data/README.md
+artifacts/*
+Mlflow/*
+outputs/
+
+
+

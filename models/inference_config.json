@@ -1,0 +1,76 @@
+{
+  "project": "Serie_temporelle",
+  "bundle_version": 1,
+  "source_notebook": "07_tuning_and_test_final.ipynb",
+  "id_col": "id_sonde",
+  "ts_col": "ts",
+  "target_col": "temp_water_c",
+  "expected_frequency": "2H",
+  "selected_models": {
+    "selection_basis": {
+      "split": "val",
+      "cv": "fold-origin",
+      "mode": "expanding",
+      "primary_metric": "mae"
+    },
+    "h2": {
+      "winner": "ridge",
+      "alpha": 10.0,
+      "mae_val": 0.074358
+    },
+    "d1": {
+      "winner_overall": "baseline",
+      "mae_val_baseline": 0.41769,
+      "best_learned_model": "sarimax",
+      "mae_val_sarimax": 0.435637,
+      "order": [
+        2,
+        0,
+        1
+      ],
+      "seasonal_order": [
+        1,
+        0,
+        1,
+        12
+      ],
+      "exog_cols": [
+        "temp_air_eobs_c",
+        "rainf_eobs"
+      ]
+    }
+  },
+  "h2": {
+    "method": "predict_continuous_ridge",
+    "alpha": 10.0,
+    "max_train_days": 365,
+    "stride_steps": 1,
+    "exog_cols": [
+      "temp_air_eobs_c",
+      "rainf_eobs"
+    ],
+    "note": "La méthode finale h2 refit Ridge à l'exécution à partir de l'historique récent."
+  },
+  "d1": {
+    "default_method": "predict_continuous_baseline",
+    "baseline_rule": "seasonal_daily",
+    "best_learned_alternative": "predict_continuous_sarimax",
+    "sarimax_order": [
+      2,
+      0,
+      1
+    ],
+    "sarimax_seasonal_order": [
+      1,
+      0,
+      1,
+      12
+    ],
+    "exog_cols": [
+      "temp_air_eobs_c",
+      "rainf_eobs"
+    ]
+  },
+  "input_schema_file": "expected_input_schema.json",
+  "ready_for_main_py": true
+}

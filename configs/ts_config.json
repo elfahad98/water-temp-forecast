@@ -1,0 +1,16 @@
+{
+  "seed": 42,
+  "val_start": "2018-01-01 00:00:00",
+  "test_start": "2018-07-01 00:00:00",
+  "horizons_steps_2h": {
+    "h2": 1,
+    "d1": 12,
+    "w1": 84
+  },
+  "backtesting": {
+    "step_days": 30,
+    "eval_window_days": 30,
+    "min_train_days": 365,
+    "rolling_window_days": 730
+  }
+}

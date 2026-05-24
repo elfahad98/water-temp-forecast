@@ -1,0 +1,16 @@
+{
+  "required_columns": [
+    "id_sonde",
+    "ts",
+    "temp_water_c",
+    "temp_air_eobs_c",
+    "rainf_eobs"
+  ],
+  "optional_columns": [],
+  "expected_frequency": "2H",
+  "notes": [
+    "Le fichier d'entrée doit rester cohérent avec le même problème métier que le projet.",
+    "Pour h2, il faut un historique suffisant pour calculer les lags et les statistiques glissantes.",
+    "Pour d1 baseline, les colonnes id_sonde, ts et temp_water_c sont le minimum strict."
+  ]
+}

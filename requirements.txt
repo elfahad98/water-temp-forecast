@@ -1,0 +1,10 @@
+numpy==1.26.4
+pandas==2.2.0
+matplotlib==3.10.3
+seaborn==0.13.2
+scikit-learn==1.7.0
+statsmodels==0.14.5
+mlflow==3.10.0
+pyarrow==20.0.0
+notebook==7.4.2
+ipykernel==6.29.5
