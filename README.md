@@ -126,15 +126,6 @@ La sélection finale exposée à l'inférence est stockée dans [models/selected
 
 ```
 
-## Environnement
-
-Le projet fournit un fichier [requirements.txt](requirements.txt) pour recréer un environnement `pip` proche de celui utilisé dans ce dépôt.
-
-```powershell
-python -m venv .venv
-.venv\Scripts\activate
-pip install -r requirements.txt
-```
 
 ## Inférence locale avec `main.py`
 
