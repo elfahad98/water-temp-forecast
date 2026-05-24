@@ -159,8 +159,16 @@ python main.py --input "C:/chemin/vers/fichier.parquet" --output "outputs/preds_
 - `--horizon d1 --model auto` utilise la baseline finale ;
 - `--horizon d1 --model sarimax` force l'alternative `SARIMAX`.
 
+---
 
-## Auteur
+## 👤 Auteur
 
 Projet réalisé par **Pierre Hervy**, **Kevin Gafura** et **COMBO El-Fahad** - Université de Caen (2026).  
 Contact : `el-fahad.combo@etu.unicaen.fr`
+
+---
+
+## 📄 Licence
+
+Ce projet est sous licence **MIT**. Voir le fichier `LICENSE`.
+
